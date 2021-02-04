@@ -1,0 +1,43 @@
+{
+    "name": "Img Downloader",
+    "version": "1.0",
+    "description": "An extension to download Images",
+    "permissions": [
+        "downloads",
+        "activeTab",
+        "declarativeContent",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "actual_code.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/ic16.png",
+            "32": "images/ic32.png",
+            "48": "images/ic48.png",
+            "128": "images/ic128.png"
+        }
+    },
+    "icons": {
+        "16": "images/ic16.png",
+        "32": "images/ic32.png",
+        "48": "images/ic48.png",
+        "128": "images/ic128.png"
+    },
+    "manifest_version": 2
+}
